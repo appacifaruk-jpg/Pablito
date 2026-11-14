@@ -15,7 +15,6 @@ export default {
 
     async execute(interaction, config, client) {
 
-        // Load your original photo from the assets folder
         const photoPath = path.resolve(
             process.cwd(),
             'assets',
@@ -26,49 +25,49 @@ export default {
             name: 'socials-photo.jpeg'
         });
 
-        // Create the social media embed
         const embed = new EmbedBuilder()
             .setColor('#0057FF')
-            .setTitle('🌐 My Social Media Links')
+            .setTitle('🌐 MY SOCIAL MEDIA')
             .setDescription(
                 'Welcome to the official social media page of **Amalito Pablito**!\n\n' +
                 '❤️ Follow me on all platforms and stay connected!'
             )
+            .setThumbnail('attachment://socials-photo.jpeg')
             .addFields(
                 {
-                    name: '🎵 TikTok',
+                    name: '<:tiktok:1571250810757849178> TikTok',
                     value: '[Follow here](https://www.tiktok.com/@amalitopablito)',
-                    inline: false
+                    inline: true
                 },
                 {
-                    name: '▶️ YouTube',
+                    name: '<:YoutubeLogo:1503442251827646574> YouTube',
                     value: '[Subscribe here](https://www.youtube.com/@AmalitoPablito)',
-                    inline: false
+                    inline: true
                 },
                 {
-                    name: '👻 Snapchat',
+                    name: '<:snapchat:1571250658995343572> Snapchat',
                     value: '[Add here](https://www.snapchat.com/@amalitopablito)',
-                    inline: false
+                    inline: true
                 },
                 {
-                    name: '📸 Instagram',
+                    name: '<:InstagramLogo:1503442280219148349> Instagram',
                     value: '[Follow here](https://www.instagram.com/amalitopablito/)',
-                    inline: false
+                    inline: true
                 },
                 {
-                    name: '🟣 Twitch',
+                    name: '<:TwitchLogo:1503442210488586431> Twitch',
                     value: '[Watch here](https://www.twitch.tv/amalitopablito)',
-                    inline: false
+                    inline: true
                 },
                 {
-                    name: '𝕏 Twitter',
+                    name: '𝕏 X',
                     value: '[Follow here](https://twitter.com/AmalitoPablito)',
-                    inline: false
+                    inline: true
                 }
             )
             .setImage('attachment://socials-photo.jpeg')
             .setFooter({
-                text: 'Thank you for supporting us ❤️'
+                text: 'Thank you for supporting Amalito Pablito ❤️'
             })
             .setTimestamp();
 
