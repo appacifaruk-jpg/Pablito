@@ -19,17 +19,17 @@ export default {
                 {
                     name: '▶️ YouTube',
                     value: '[Subscribe here](https://www.youtube.com/@AmalitoPablito)',
-                    inline: false
-              
+                    inline: false,
+                },
                 {
                     name: '📸 Instagram',
                     value: '[Follow here](https://www.instagram.com/amalitopablito/)',
-                    inline: false
+                    inline: false,
                 },
                 {
                     name: '🟣 Twitch',
-                    value: '[Watch here](twitch.tv/amalitopablito)',
-                    inline: false
+                    value: '[Watch here](https://www.twitch.tv/amalitopablito)',
+                    inline: false,
                 }
             )
             .setFooter({
