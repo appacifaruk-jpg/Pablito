@@ -56,9 +56,14 @@ export default {
             })
             .setTimestamp();
 
-        await interaction.reply({
+        await interaction.channel.send({
             embeds: [embed],
             files: [photo]
+        });
+
+        await interaction.reply({
+            content: 'Socials bericht geplaatst!',
+            ephemeral: true
         });
     }
 };
