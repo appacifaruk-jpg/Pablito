@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+import { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } from 'discord.js';
 
 export default {
     category: 'Socials',
@@ -8,49 +8,31 @@ export default {
         .setDescription('Show all our social media links'),
 
     async execute(interaction, config, client) {
+        const image = new AttachmentBuilder(
+            './src/commands/Socials/amalito.png'
+        );
+
         const embed = new EmbedBuilder()
-            .setColor('#0057FF')
-            .setTitle('🌐 My Social Media Links')
-            .setDescription('Welcome to our official social media page!')
-            .addFields(
-                {
-                    name: '🎵 TikTok',
-                    value: '[Follow here](https://www.tiktok.com/@amalitopablito)',
-                    inline: false,
-                },
-                {
-                    name: '▶️ YouTube',
-                    value: '[Subscribe here](https://www.youtube.com/@AmalitoPablito)',
-                    inline: false,
-                },
-                {
-                    name: '👻 Snapchat',
-                    value: '[Add here](https://www.snapchat.com/@amalitopablito)',
-                    inline: false,
-                },
-                {
-                    name: '📸 Instagram',
-                    value: '[Follow here](https://www.instagram.com/amalitopablito/)',
-                    inline: false,
-                },
-                {
-                    name: '🟣 Twitch',
-                    value: '[Watch here](https://www.twitch.tv/amalitopablito)',
-                    inline: false,
-                },
-                {
-                    name: '𝕏 X',
-                    value: '[Follow here](https://twitter.com/AmalitoPablito)',
-                    inline: false,
-                }
+            .setColor('#E53935')
+            .setTitle('🌐 AMALITOPABLITO')
+            .setDescription(
+                '**OFFICIAL SOCIAL MEDIA LINKS**\n\n' +
+                '🎵 **TikTok** — [Follow here](https://www.tiktok.com/@amalitopablito)\n\n' +
+                '▶️ **YouTube** — [Subscribe here](https://www.youtube.com/@AmalitoPablito)\n\n' +
+                '👻 **Snapchat** — [Add here](https://www.snapchat.com/@amalitopablito)\n\n' +
+                '📸 **Instagram** — [Follow here](https://www.instagram.com/amalitopablito/)\n\n' +
+                '🟣 **Twitch** — [Watch here](https://www.twitch.tv/amalitopablito)\n\n' +
+                '𝕏 — [Follow here](https://x.com/AmalitoPablito)'
             )
+            .setImage('attachment://amalito.png')
             .setFooter({
-                text: 'Thank you for supporting us ❤️'
+                text: 'THANK YOU FOR THE SUPPORT ❤️'
             })
             .setTimestamp();
 
         await interaction.reply({
-            embeds: [embed]
+            embeds: [embed],
+            files: [image]
         });
     }
 };
