@@ -27,43 +27,28 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor('#0057FF')
-            .setTitle('🌐 MY SOCIAL MEDIA')
+            .setTitle('🌐 AMALITO PABLITO | SOCIALS')
             .setDescription(
-                'Welcome to the official social media page of **Amalito Pablito**!\n\n' +
-                '❤️ Follow me on all platforms and stay connected!'
-            )
-            .setThumbnail('attachment://socials-photo.jpeg')
-            .addFields(
-                {
-                    name: '<:tiktok:1571250810757849178> TikTok',
-                    value: '[Follow here](https://www.tiktok.com/@amalitopablito)',
-                    inline: true
-                },
-                {
-                    name: '<:YoutubeLogo:1503442251827646574> YouTube',
-                    value: '[Subscribe here](https://www.youtube.com/@AmalitoPablito)',
-                    inline: true
-                },
-                {
-                    name: '<:snapchat:1571250658995343572> Snapchat',
-                    value: '[Add here](https://www.snapchat.com/@amalitopablito)',
-                    inline: true
-                },
-                {
-                    name: '<:InstagramLogo:1503442280219148349> Instagram',
-                    value: '[Follow here](https://www.instagram.com/amalitopablito/)',
-                    inline: true
-                },
-                {
-                    name: '<:TwitchLogo:1503442210488586431> Twitch',
-                    value: '[Watch here](https://www.twitch.tv/amalitopablito)',
-                    inline: true
-                },
-                {
-                    name: '𝕏 X',
-                    value: '[Follow here](https://twitter.com/AmalitoPablito)',
-                    inline: true
-                }
+                'Welcome to the official social media page of **Amalito Pablito**!\n' +
+                'Follow me on all platforms and stay connected! ❤️\n\n' +
+
+                '<:tiktok:1571250810757849178> **TikTok**\n' +
+                '[Follow here](https://www.tiktok.com/@amalitopablito)\n\n' +
+
+                '<:Youtube_logo:1571253026021445662> **YouTube**\n' +
+                '[Subscribe here](https://www.youtube.com/@AmalitoPablito)\n\n' +
+
+                '<:snapchat:1571250658995343572> **Snapchat**\n' +
+                '[Add here](https://www.snapchat.com/@amalitopablito)\n\n' +
+
+                '<:InstagramIcon:1571253438325588070> **Instagram**\n' +
+                '[Follow here](https://www.instagram.com/amalitopablito/)\n\n' +
+
+                '<:twitchlogotwitchlogotransparentt:1571253066316124221> **Twitch**\n' +
+                '[Watch here](https://www.twitch.tv/amalitopablito)\n\n' +
+
+                '**𝕏 X**\n' +
+                '[Follow here](https://twitter.com/AmalitoPablito)'
             )
             .setImage('attachment://socials-photo.jpeg')
             .setFooter({
