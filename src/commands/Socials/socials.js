@@ -1,4 +1,8 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+import {
+    SlashCommandBuilder,
+    EmbedBuilder,
+    AttachmentBuilder
+} from 'discord.js';
 
 export default {
     category: 'Socials',
@@ -8,10 +12,19 @@ export default {
         .setDescription('Show all our social media links'),
 
     async execute(interaction, config, client) {
+
+        const photo = new AttachmentBuilder(
+            './assets/socials-photo.jpeg',
+            { name: 'socials-photo.jpeg' }
+        );
+
         const embed = new EmbedBuilder()
             .setColor('#0057FF')
             .setTitle('🌐 My Social Media Links')
-            .setDescription('Welcome to our official social media page!')
+            .setDescription(
+                'Welcome to the official social media page of **Amalito Pablito**!\n\n' +
+                '❤️ Follow me on all platforms and stay connected!'
+            )
             .addFields(
                 {
                     name: '🎵 TikTok',
@@ -44,13 +57,15 @@ export default {
                     inline: false,
                 }
             )
+            .setImage('attachment://socials-photo.jpeg')
             .setFooter({
                 text: 'Thank you for supporting us ❤️'
             })
             .setTimestamp();
 
         await interaction.reply({
-            embeds: [embed]
+            embeds: [embed],
+            files: [photo]
         });
     }
 };
