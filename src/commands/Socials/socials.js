@@ -47,7 +47,7 @@ export default {
                 '<:twitchlogotwitchlogotransparentt:1571254599631904778> **Twitch**\n' +
                 '[Watch here](https://www.twitch.tv/amalitopablito)\n\n' +
 
-                '**𝕏 X**\n' +
+                '**𝕏**\n' +
                 '[Follow here](https://twitter.com/AmalitoPablito)'
             )
             .setImage('attachment://socials-photo.jpeg')
