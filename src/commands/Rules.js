@@ -15,7 +15,7 @@ export default {
             .setTitle("🛡️  THE PABLITO'S")
             .setDescription(
                 '# 📜 SERVER RULES\n' +
-                'Welcome to our official community!\n\n' +
+                'Welcome to the official Amalito Pablito community!\n\n' +
                 'Please take a moment to read all the rules carefully.\n' +
                 'By staying in this server, you agree to follow them.\n\n' +
                 '━━━━━━━━━━━━━━━━━━━━'
