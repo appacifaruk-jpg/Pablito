@@ -12,7 +12,7 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor('#5865F2')
-            .setTitle('🛡️  AMALITO PABLITO')
+            .setTitle('🛡️  The Pablito's ')
             .setDescription(
                 '# 📜 SERVER RULES\n' +
                 'Welcome to our official community!\n\n' +
@@ -63,7 +63,7 @@ export default {
                 {
                     name: '❤️  THANK YOU',
                     value:
-                        'Thank you for being part of **Amalito Pablito**!\n' +
+                        'Thank you for being part of **The Pablito's**!\n' +
                         'Enjoy your stay and have fun!'
                 }
             )
