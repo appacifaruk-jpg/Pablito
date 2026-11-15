@@ -12,7 +12,7 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor('#5865F2')
-            .setTitle('🛡️  The Pablito's ')
+            .setTitle("🛡️  THE PABLITO'S")
             .setDescription(
                 '# 📜 SERVER RULES\n' +
                 'Welcome to our official community!\n\n' +
@@ -63,12 +63,12 @@ export default {
                 {
                     name: '❤️  THANK YOU',
                     value:
-                        'Thank you for being part of **The Pablito's**!\n' +
+                        "Thank you for being part of **The Pablito's**!\n" +
                         'Enjoy your stay and have fun!'
                 }
             )
             .setFooter({
-                text: 'AMALITO PABLITO • OFFICIAL SERVER RULES'
+                text: "THE PABLITO'S • OFFICIAL SERVER RULES"
             })
             .setTimestamp();
 
