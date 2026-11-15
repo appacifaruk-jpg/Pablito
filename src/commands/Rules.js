@@ -1,55 +1,83 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+import { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } from 'discord.js';
 
 export default {
     category: 'Rules',
 
     data: new SlashCommandBuilder()
         .setName('rules')
-        .setDescription('Show the official server rules'),
+        .setDescription('Post the official server rules')
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild),
 
     async execute(interaction, config, client) {
 
         const embed = new EmbedBuilder()
             .setColor('#5865F2')
-            .setTitle('🛡️ AMALITO PABLITO | SERVER RULES')
+            .setTitle('🛡️  AMALITO PABLITO')
             .setDescription(
-                'Welcome to the official Amalito Pablito Discord server!\n' +
-                'Please read and follow all the rules below.'
+                '# 📜 SERVER RULES\n' +
+                'Welcome to our official community!\n\n' +
+                'Please take a moment to read all the rules carefully.\n' +
+                'By staying in this server, you agree to follow them.\n\n' +
+                '━━━━━━━━━━━━━━━━━━━━'
             )
             .addFields(
                 {
-                    name: '📜 GENERAL RULES',
+                    name: '📌  GENERAL RULES',
                     value:
-                        '1. Respect all members.\n' +
-                        '2. No racism, discrimination or hate speech.\n' +
-                        '3. No spamming or flooding.\n' +
-                        '4. No advertising without permission.\n' +
-                        '5. No inappropriate content.\n' +
-                        '6. Follow staff instructions.'
+                        '**01. Respect Everyone**\n' +
+                        'Treat all members with respect.\n\n' +
+
+                        '**02. No Discrimination**\n' +
+                        'Racism, hate speech and discrimination are not allowed.\n\n' +
+
+                        '**03. No Spamming**\n' +
+                        'Avoid spam, flooding and unnecessary messages.\n\n' +
+
+                        '**04. No Advertising**\n' +
+                        'Advertising without permission is prohibited.\n\n' +
+
+                        '**05. Appropriate Content**\n' +
+                        'Keep all content appropriate for the community.\n\n' +
+
+                        '**06. Listen to Staff**\n' +
+                        'Always follow instructions from our staff team.'
                 },
                 {
-                    name: '⚠️ PUNISHMENTS',
-                    value:
-                        'Breaking the rules may result in:\n' +
-                        '• Warning\n' +
-                        '• Mute\n' +
-                        '• Kick\n' +
-                        '• Permanent ban'
+                    name: '\u200B',
+                    value: '━━━━━━━━━━━━━━━━━━━━'
                 },
                 {
-                    name: '❤️ THANK YOU',
+                    name: '⚠️  RULE VIOLATIONS',
                     value:
-                        'Thank you for being part of our community!\n' +
-                        'Enjoy your stay!'
+                        'Breaking the rules can result in:\n\n' +
+                        '• **Warning**\n' +
+                        '• **Mute / Timeout**\n' +
+                        '• **Kick**\n' +
+                        '• **Permanent Ban**\n\n' +
+                        'Our staff team decides the appropriate punishment.'
+                },
+                {
+                    name: '\u200B',
+                    value: '━━━━━━━━━━━━━━━━━━━━'
+                },
+                {
+                    name: '❤️  THANK YOU',
+                    value:
+                        'Thank you for being part of **Amalito Pablito**!\n' +
+                        'Enjoy your stay and have fun!'
                 }
             )
             .setFooter({
-                text: 'Amalito Pablito • Official Server Rules'
+                text: 'AMALITO PABLITO • OFFICIAL SERVER RULES'
             })
             .setTimestamp();
 
-        await interaction.reply({
+        await interaction.deferReply({ ephemeral: true });
+
+        await interaction.channel.send({
             embeds: [embed]
         });
+
+        await interaction.deleteReply();
     }
 };
